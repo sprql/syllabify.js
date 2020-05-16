@@ -1,0 +1,18 @@
+const { deepStrictEqual } = require('assert')
+const syllabify = require('./index.js')
+
+deepStrictEqual(syllabify('перепёлка'), ['пе', 'ре', 'пёл', 'ка'])
+deepStrictEqual(syllabify('войлоки'), ['вой', 'ло', 'ки'])
+deepStrictEqual(syllabify('помидорка'), ['по', 'ми', 'дор', 'ка'])
+deepStrictEqual(syllabify('улитка'), ['у', 'ли', 'тка'])
+deepStrictEqual(syllabify('каменная'), ['ка', 'ме', 'нна', 'я'])
+deepStrictEqual(syllabify('воспитанность'), ['во', 'спи', 'та', 'нность'])
+deepStrictEqual(syllabify('заинтересованностью'), ['за', 'ин', 'те', 'ре', 'со', 'ва', 'нность', 'ю'])
+deepStrictEqual(syllabify('кто-то'), ['кто-', 'то'])
+deepStrictEqual(syllabify('кто/что'), ['кто/', 'что'])
+deepStrictEqual(syllabify('единообразие'), ['е', 'ди', 'но', 'о', 'бра', 'зи', 'е'])
+deepStrictEqual(syllabify('йогурт'), ['йо', 'гурт'])
+deepStrictEqual(syllabify('рьяный'), ['рья', 'ный'])
+deepStrictEqual(syllabify('ВОЙЛОКИ'), ['ВОЙ', 'ЛО', 'КИ'])
+
+console.log('All tests passed')

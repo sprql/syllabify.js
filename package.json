@@ -1,0 +1,25 @@
+{
+  "name": "syllabify",
+  "version": "1.0.0",
+  "description": "Split Russian words into syllables (фонетическое деление слова на слоги)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sprql/syllabify.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node index_test.js",
+    "lint": "npx standard '*.js'"
+  },
+  "keywords": [
+    "syllables",
+    "syllabify",
+    "Russian",
+    "language",
+    "text processing",
+    "деление слова",
+    "слоги"
+  ],
+  "author": "@sprql",
+  "license": "MIT"
+}
