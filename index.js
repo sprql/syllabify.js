@@ -79,11 +79,15 @@ function syllabify (word) {
 
   for (let i = word.length - 1; i >= 0; i--) {
     const letter = word[i]
-    if (voweled && (isNonLetter(letter))) {
+    if (voweled && isVowel(letter)) {
+      syllables.push(syllable)
+      syllable = letter
+      voweled = (syllables.length < totalSyllables - 1)
+    } else if (voweled && (isNonLetter(letter))) {
       syllables.push(syllable)
       syllable = letter
       voweled = false
-    } else if (voweled && letter === prevLetter && !isVowel(letter)) {
+    } else if (voweled && letter === prevLetter) {
       syllables.push(letter + syllable)
       syllable = ''
       voweled = false
@@ -91,10 +95,6 @@ function syllabify (word) {
       syllables.push(syllable)
       syllable = letter
       voweled = false
-    } else if (voweled && isVowel(letter)) {
-      syllables.push(syllable)
-      syllable = letter
-      voweled = (syllables.length < totalSyllables - 1)
     } else {
       voweled = voweled || isVowel(letter)
       syllable = letter + syllable
