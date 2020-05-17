@@ -11,9 +11,11 @@ $ npm install syllabify
 ## Usage
 
 ```js
-const syllabify = require('syllabify');
+const syllabify = require('syllabify')
+// or
+// import syllabify from 'syllabify'
 
-syllabify("Вдохновение");
+syllabify('Вдохновение')
 //=> [ 'Вдо', 'хно', 'ве', 'ни', 'е' ]
 ```
 
